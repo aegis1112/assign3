@@ -91,7 +91,7 @@ void draw() {
 if(c==0)
 {
   for(int i=0;i<5;i++){
-  image (enemy,enemyX-70*i,170);
+  image (enemy,enemyX-70*i,enemyY);
   }
   enemyX %= 930;
   if (enemyX >1000){enemyY = 180;}
@@ -129,7 +129,9 @@ if(c==2){
     if (enemyX >1000){enemyY = 100;}
     enemyX += 5;
     //enemyY += 0.02*(fighterY-enemyY+25);
-    if(enemyX>910){c=0;}
+    if(enemyX>910){c=0;
+enemyY=floor(random(50,430));}
+
   }
   
 
